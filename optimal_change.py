@@ -30,8 +30,7 @@ def optimal_change(item_cost, amount_paid):
         return "You have underpaid."
     # Need this to catch issues introduced by conversion above to integer values
     elif (amount_paid - item_cost) < .009:
-        return "You aren't paying with legal tender."
-
+        return "Error, smallest unit of legal tender is 1 penny."
     # Begin main logic for string generation
     else:
         # From top of currency dict to bottom, evaluate change due against value of a key
